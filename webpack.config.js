@@ -8,6 +8,8 @@ module.exports = {
   mode: 'production', // 开发模式
   devServer: {
     port: 3000,
+    open: true,
+    watchFiles: ['src/index.html'],
   },
   entry: './src/js/index.js', // 入口起点
   output: {
@@ -28,6 +30,14 @@ module.exports = {
           name: 'imgs/[hash:8].[ext]',
           esModule: false,
         },
+      },
+      {
+        // 处理其他资源
+        exclude: /\.(html|js|css|jpg|png|gif)/,
+        loader: 'file-loader',
+        options: {
+          name: 'static/[hash:8].[ext]',
+        }
       }
     ],
   },

@@ -75,6 +75,9 @@ function canvas2Img() {
   img.src = canvas.toDataURL('image/png')
   img.className = 'postcard'
   document.querySelector('body').appendChild(img)
+
+  mycanvas.style.display = 'none'
+  mycanvas = null
   // setTimeout(() => {
   //     document.querySelector("body").removeChild(document.getElementById("loading"))
   // },1000)
