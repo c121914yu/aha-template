@@ -1,0 +1,11 @@
+node_modules
+/dist
+.vscode
+.github
+styles
+imgs
+
+*.ico
+*.json
+*.html
+*.css
