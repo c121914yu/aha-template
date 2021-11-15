@@ -2,7 +2,6 @@ const { resolve } = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const miniCssExtractPlugin = require('mini-css-extract-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
   mode: 'production', // 开发模式
@@ -54,7 +53,7 @@ module.exports = {
     new miniCssExtractPlugin({
       filename: 'css/[hash:8].css' // 输出文件名
     }),
-    () => isProd ? new CleanWebpackPlugin() : null, // 清除上次打包的文件
+    new CleanWebpackPlugin() // 清除上次打包的文件
   ],
   performance: {
     hints: false // 取消性能提醒
