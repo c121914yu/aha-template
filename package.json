@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server",
-    "build": "cross-env NODE_ENV=production webpack",
+    "dev": "aha-cli dev",
+    "build": "aha-cli build",
+    "deploy": "aha-cli deploy",
     "lint": ".\\node_modules\\.bin\\eslint --fix src\\**"
   },
   "repository": {
@@ -34,5 +35,8 @@
     "webpack": "^5.63.0",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.4.0"
+  },
+  "dependencies": {
+    "aha-simple-cli": "^1.0.0"
   }
 }

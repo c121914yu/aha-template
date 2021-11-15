@@ -65,7 +65,7 @@ function drawText() {
   ctx.textAlign = 'left'
   ctx.fillText(name, 10, 10)
 }
-
+console.log(222222222)
 /**
  * 转成图片并销毁canvas
  */

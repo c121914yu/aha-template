@@ -2,6 +2,7 @@ const { resolve } = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const miniCssExtractPlugin = require('mini-css-extract-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const { buildDir } = require('./aha-config')
 
 module.exports = {
   mode: 'production', // 开发模式
@@ -13,7 +14,7 @@ module.exports = {
   entry: './src/js/index.js', // 入口起点
   output: {
     filename: 'js/[hash:8].js',
-    path: resolve(__dirname, 'dist'),
+    path: resolve(__dirname, `dist/${ buildDir }`),
   },
   module: {
     rules: [
